@@ -1,0 +1,39 @@
+<!doctype html>
+<!-- Source of public/og.png (1200x630). Rendered with: npm run og -->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face { font-family: Fraunces; src: url(../../node_modules/@fontsource-variable/fraunces/files/fraunces-latin-opsz-normal.woff2); font-style: normal; font-weight: 100 900; }
+  @font-face { font-family: Fraunces; src: url(../../node_modules/@fontsource-variable/fraunces/files/fraunces-latin-opsz-italic.woff2); font-style: italic; font-weight: 100 900; }
+  @font-face { font-family: Manrope; src: url(../../node_modules/@fontsource-variable/manrope/files/manrope-latin-wght-normal.woff2); font-weight: 200 800; }
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+  body { background: #f7f4ec; font-family: Manrope, sans-serif; color: #22201b; position: relative; -webkit-font-smoothing: antialiased; }
+  .staff { position: absolute; left: 0; right: 0; top: 150px; height: 180px; background: url(staff.svg) center / cover no-repeat; opacity: .55; }
+  .text { position: absolute; left: 72px; top: 64px; width: 620px; }
+  .brand { display: flex; align-items: center; gap: 14px; font-family: Fraunces; font-size: 34px; letter-spacing: -.02em; color: #0b1713; }
+  .eyebrow { margin-top: 44px; font-size: 15px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #10614b; }
+  h1 { margin: 14px 0 0; font-family: Fraunces; font-weight: 400; font-optical-sizing: auto; letter-spacing: -.02em; font-size: 92px; line-height: 1.0; color: #0b1713; }
+  h1 em { color: #10614b; }
+  p { margin: 26px 0 0; font-size: 25px; line-height: 1.45; color: #4b473d; width: 520px; }
+  .window { position: absolute; left: 730px; top: 120px; width: 760px; border-radius: 18px; overflow: hidden; background: #12211b; box-shadow: 0 30px 70px -20px rgba(6,36,28,.6); }
+  .window .bar { height: 30px; }
+  .window img { display: block; width: 100%; }
+  .keys { position: absolute; left: 0; right: 0; bottom: 0; height: 54px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='98' height='40' preserveAspectRatio='none'%3E%3Crect width='98' height='40' fill='%23f7f4ec'/%3E%3Cg fill='%23c9c3b2'%3E%3Crect x='13' width='1' height='40'/%3E%3Crect x='27' width='1' height='40'/%3E%3Crect x='41' width='1' height='40'/%3E%3Crect x='55' width='1' height='40'/%3E%3Crect x='69' width='1' height='40'/%3E%3Crect x='83' width='1' height='40'/%3E%3Crect x='97' width='1' height='40'/%3E%3C/g%3E%3Cg fill='%230b1713'%3E%3Crect x='9' width='9' height='25' rx='1'/%3E%3Crect x='23' width='9' height='25' rx='1'/%3E%3Crect x='51' width='9' height='25' rx='1'/%3E%3Crect x='65' width='9' height='25' rx='1'/%3E%3Crect x='79' width='9' height='25' rx='1'/%3E%3C/g%3E%3C/svg%3E") repeat-x left top / 98px 100%; border-top: 6px solid #12211b; }
+</style>
+</head>
+<body>
+  <div class="staff"></div>
+  <div class="window"><div class="bar"></div><img src="../../public/capturas/teclas-1024.webp" alt=""></div>
+  <div class="text">
+    <div class="brand">
+      <svg viewBox="0 0 180 180" width="44" height="44"><g fill="#0b1713"><rect x="12" y="76" width="16" height="48" rx="8" opacity=".55"/><rect x="48" y="46" width="16" height="108" rx="8" opacity=".8"/><rect x="84" y="66" width="16" height="68" rx="8"/></g><g fill="#e0b354"><rect x="142" y="16" width="16" height="126" rx="8"/><ellipse cx="126" cy="140" rx="30" ry="23" transform="rotate(-24 126 140)"/></g></svg>
+      Klavyra
+    </div>
+    <div class="eyebrow">Transcripción de piano con IA</div>
+    <h1>Del sonido a la <em>partitura</em></h1>
+    <p>Partitura, MIDI y teclas de cualquier canción de piano. Gratis, para Windows.</p>
+  </div>
+  <div class="keys"></div>
+</body>
+</html>

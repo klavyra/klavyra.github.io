@@ -1,0 +1,187 @@
+@import "tailwindcss";
+@import "@fontsource-variable/fraunces/opsz.css";
+@import "@fontsource-variable/fraunces/opsz-italic.css";
+@import "@fontsource-variable/manrope";
+
+/* Klavyra's identity, the same tokens as the app (D:\Klavyra\web). */
+@theme {
+  --color-ink: #0b1713;
+  --color-ink-2: #12211b;
+  --color-paper: #f7f4ec;
+  --color-brass: #e0b354;
+  --color-brass-hover: #ebc36d;
+  --color-felt: #3fb08c;
+
+  /* Piano-felt green */
+  --color-primary-50: #edf9f4;
+  --color-primary-100: #d3f0e3;
+  --color-primary-200: #aae0cb;
+  --color-primary-300: #74cbad;
+  --color-primary-400: #3fb08c;
+  --color-primary-500: #1f9672;
+  --color-primary-600: #14795c;
+  --color-primary-700: #10614b;
+  --color-primary-800: #0f4e3d;
+  --color-primary-900: #0d4033;
+  --color-primary-950: #06241c;
+
+  /* Warm ivory surfaces */
+  --color-surface-0: #fffefb;
+  --color-surface-50: #f7f4ec;
+  --color-surface-100: #efebe0;
+  --color-surface-200: #e2ddcf;
+  --color-surface-300: #cdc7b6;
+  --color-surface-400: #a8a292;
+  --color-surface-500: #837e70;
+  --color-surface-600: #655f53;
+  --color-surface-700: #4b473d;
+  --color-surface-800: #34312a;
+  --color-surface-900: #22201b;
+  --color-surface-950: #14130f;
+
+  /* Green-black ink surfaces */
+  --color-night-50: #eef3f0;
+  --color-night-100: #d9e2dd;
+  --color-night-200: #b7c5be;
+  --color-night-300: #93a59c;
+  --color-night-400: #70857b;
+  --color-night-500: #52675e;
+  --color-night-600: #3a4e45;
+  --color-night-700: #293b33;
+  --color-night-800: #1b2c25;
+  --color-night-900: #12211b;
+  --color-night-950: #0b1713;
+
+  --font-sans: "Manrope Variable", system-ui, sans-serif;
+  --font-display: "Fraunces Variable", Georgia, serif;
+
+  --shadow-ink: 0 24px 60px -20px rgba(6, 36, 28, 0.55);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--color-paper);
+  color: var(--color-surface-900);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+
+::selection {
+  background: var(--color-primary-200);
+  color: var(--color-ink);
+}
+
+:where(a, button, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--color-brass);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+@layer components {
+  .k-display {
+    font-family: var(--font-display);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+  }
+
+  .k-eyebrow {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-primary-700);
+  }
+
+  /* The signature action. */
+  .k-brass {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    border-radius: 0.75rem;
+    background: var(--color-brass);
+    color: var(--color-ink);
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 10px 24px -12px rgba(160, 112, 20, 0.65), inset 0 -2px 0 rgba(11, 23, 19, 0.12);
+    transition: background-color 0.15s, transform 0.15s;
+  }
+  .k-brass:hover {
+    background: var(--color-brass-hover);
+  }
+  .k-brass:active {
+    transform: translateY(1px);
+  }
+
+  /* Secondary action on ivory. */
+  .k-ghost {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 0.75rem;
+    border: 1px solid var(--color-surface-300);
+    color: var(--color-primary-700);
+    font-weight: 700;
+    text-decoration: none;
+    transition: border-color 0.15s, background-color 0.15s;
+  }
+  .k-ghost:hover {
+    border-color: var(--color-primary-700);
+    background: var(--color-surface-0);
+  }
+
+  /* Secondary action on ink. */
+  .k-ghost-dark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 0.75rem;
+    background: color-mix(in srgb, white 8%, transparent);
+    border: 1px solid color-mix(in srgb, white 18%, transparent);
+    color: var(--color-surface-0);
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.15s;
+  }
+  .k-ghost-dark:hover {
+    background: color-mix(in srgb, white 14%, transparent);
+  }
+
+  /* One octave of piano keys, tiled: Klavyra's signature motif. */
+  .k-keys {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='98' height='40' preserveAspectRatio='none'%3E%3Crect width='98' height='40' fill='%23f7f4ec'/%3E%3Cg fill='%23c9c3b2'%3E%3Crect x='13' width='1' height='40'/%3E%3Crect x='27' width='1' height='40'/%3E%3Crect x='41' width='1' height='40'/%3E%3Crect x='55' width='1' height='40'/%3E%3Crect x='69' width='1' height='40'/%3E%3Crect x='83' width='1' height='40'/%3E%3Crect x='97' width='1' height='40'/%3E%3C/g%3E%3Cg fill='%230b1713'%3E%3Crect x='9' width='9' height='25' rx='1'/%3E%3Crect x='23' width='9' height='25' rx='1'/%3E%3Crect x='51' width='9' height='25' rx='1'/%3E%3Crect x='65' width='9' height='25' rx='1'/%3E%3Crect x='79' width='9' height='25' rx='1'/%3E%3C/g%3E%3C/svg%3E")
+      repeat-x left top / 98px 100%;
+  }
+
+  .k-section {
+    margin-inline: auto;
+    width: 100%;
+    max-width: 72rem;
+    padding-inline: 1rem;
+  }
+  @media (min-width: 640px) {
+    .k-section {
+      padding-inline: 1.5rem;
+    }
+  }
+}
