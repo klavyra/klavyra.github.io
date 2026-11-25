@@ -106,5 +106,5 @@ npm run og         # regenera public/og.png (1200×630) con Edge o Chrome sin in
 ```
 
 - Estructura: `src/app/sections/` (una sección por archivo) y `src/app/shared/` (logo, pentagrama animado, marco de ventana, iconos y enlaces). Los enlaces de descarga y del repo están en `src/app/shared/links.ts`.
-- Despliegue: `.github/workflows/deploy.yml` publica en GitHub Pages al hacer push a `main` (o a mano desde Actions). En el repo hay que elegir *Settings → Pages → Source: GitHub Actions*. El `base-href` se calcula solo, así que sirve igual en `https://j-roque.github.io/Klavyra/` que en un repo propio.
-- Si la URL final no es `https://j-roque.github.io/Klavyra/`, cambia `canonical`, `og:url`, `og:image` y `twitter:image` en `src/index.html`.
+- Despliegue: `.github/workflows/deploy.yml` publica en GitHub Pages al hacer push a `main` (o a mano desde Actions). En el repo hay que elegir *Settings → Pages → Source: GitHub Actions*. El `base-href` se calcula solo, así que sirve igual en `https://j-roque.github.io/klavyra-landing/` que en otra ruta.
+- Si la URL final no es `https://j-roque.github.io/klavyra-landing/`, cambia `canonical`, `og:url`, `og:image` y `twitter:image` en `src/index.html`.
