@@ -9,6 +9,13 @@ import { WindowFrame } from '../shared/window-frame';
   imports: [Staff, Icon, WindowFrame],
   template: `
     <section id="inicio" aria-labelledby="hero-title" class="relative overflow-hidden">
+      <!-- Background: ruled music paper, a felt-green light behind the title and a touch of brass. -->
+      <div aria-hidden="true" class="pointer-events-none absolute inset-0">
+        <div class="k-ruled absolute inset-x-0 top-0 h-[44rem]"></div>
+        <div class="k-glow absolute left-1/2 top-16 h-72 w-[min(56rem,120%)] -translate-x-1/2 bg-primary-100/80"></div>
+        <div class="k-glow absolute right-[8%] top-6 hidden h-40 w-72 bg-brass/20 md:block"></div>
+      </div>
+
       <div class="relative pt-12 sm:pt-20">
         <!-- The staff runs behind the title: sound on the left, notation on the right. -->
         <k-staff

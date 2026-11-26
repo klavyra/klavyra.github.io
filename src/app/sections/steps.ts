@@ -4,8 +4,14 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'k-steps',
   template: `
-    <section id="como-funciona" aria-labelledby="steps-title" class="bg-ink-2 text-surface-0">
-      <div class="k-section pb-16 pt-16 sm:pb-20 sm:pt-20">
+    <section id="como-funciona" aria-labelledby="steps-title" class="relative overflow-hidden bg-ink-2 text-surface-0">
+      <!-- Background: faint ruled paper on ink and a felt-green light from above. -->
+      <div aria-hidden="true" class="pointer-events-none absolute inset-0">
+        <div class="k-ruled k-ruled-dark absolute inset-0"></div>
+        <div class="k-glow absolute -top-24 left-[12%] h-72 w-[36rem] max-w-full bg-felt/20"></div>
+        <div class="k-glow absolute -top-16 right-[6%] hidden h-48 w-80 bg-brass/10 md:block"></div>
+      </div>
+      <div class="k-section relative pb-16 pt-16 sm:pb-20 sm:pt-20">
         <p class="k-eyebrow m-0 mb-3 !text-primary-300">Cómo funciona</p>
         <h2 id="steps-title" class="k-display m-0 max-w-2xl text-4xl leading-tight sm:text-5xl">
           Tres pasos, de la grabación a <em class="text-brass">tus manos</em>
@@ -62,7 +68,7 @@ import { Component } from '@angular/core';
           </li>
         </ol>
       </div>
-      <div aria-hidden="true" class="k-keys h-12"></div>
+      <div aria-hidden="true" class="k-keys relative h-12"></div>
     </section>
   `,
 })
