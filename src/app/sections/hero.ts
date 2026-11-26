@@ -24,9 +24,13 @@ import { WindowFrame } from '../shared/window-frame';
 
         <div class="k-section relative flex flex-col items-center text-center">
           <p class="k-eyebrow m-0 mb-4">Transcripción de piano con IA</p>
-          <h1 id="hero-title" class="k-display m-0 text-[2.75rem] leading-[1.04] text-ink sm:text-6xl lg:text-7xl">
-            Del sonido a la <em class="text-primary-700">partitura</em>
-          </h1>
+          <div class="relative">
+            <!-- An ivory halo behind the title, so the staff and the notes pass softly behind it instead of touching it. -->
+            <div aria-hidden="true" class="absolute -inset-x-6 inset-y-1 rounded-full bg-paper/80 blur-xl sm:-inset-x-10"></div>
+            <h1 id="hero-title" class="k-display relative m-0 text-[2.75rem] leading-[1.04] text-ink sm:text-6xl lg:text-7xl">
+              Del sonido a la <em class="text-primary-700">partitura</em>
+            </h1>
+          </div>
           <p class="mx-auto mb-0 mt-6 max-w-xl text-lg leading-relaxed text-surface-700 sm:text-xl">
             Convierte cualquier canción de piano en partitura, MIDI y teclas, gratis y en tu PC.
           </p>
