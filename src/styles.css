@@ -173,6 +173,39 @@ body {
       repeat-x left top / 98px 100%;
   }
 
+  /*
+   * Ruled music paper: groups of five staff lines, repeated. Klavyra's take on a "technical paper" grid.
+   * Faded toward the edges with a mask, so it never ends in a hard line.
+   */
+  .k-ruled {
+    --ruled-color: color-mix(in srgb, var(--color-surface-300) 55%, transparent);
+    --ruled-fade: radial-gradient(ellipse 75% 70% at 50% 35%, #000 25%, transparent 75%);
+    background-image: repeating-linear-gradient(
+      to bottom,
+      var(--ruled-color) 0 1px,
+      transparent 1px 12px,
+      var(--ruled-color) 12px 13px,
+      transparent 13px 24px,
+      var(--ruled-color) 24px 25px,
+      transparent 25px 36px,
+      var(--ruled-color) 36px 37px,
+      transparent 37px 48px,
+      var(--ruled-color) 48px 49px,
+      transparent 49px 112px
+    );
+    -webkit-mask-image: var(--ruled-fade);
+    mask-image: var(--ruled-fade);
+  }
+  .k-ruled-dark {
+    --ruled-color: rgb(255 255 255 / 0.055);
+  }
+
+  /* A soft light behind a block: felt green, or brass for the call to action. */
+  .k-glow {
+    border-radius: 9999px;
+    filter: blur(60px);
+  }
+
   .k-section {
     margin-inline: auto;
     width: 100%;
