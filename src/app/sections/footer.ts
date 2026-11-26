@@ -11,7 +11,7 @@ import { Staff } from '../shared/staff';
     <!-- Last call to action: the ink card of the app, keyboard strip included. -->
     <section aria-labelledby="cta-title" class="k-section py-20 sm:py-28">
       <div class="relative overflow-hidden rounded-2xl bg-ink-2 text-surface-0 shadow-ink">
-        <k-staff class="pointer-events-none absolute inset-x-0 top-1/2 h-40 -translate-y-1/2 opacity-25 sm:h-56" />
+        <k-staff [loops]="1" [breathe]="false" class="pointer-events-none absolute inset-x-0 top-1/2 h-40 -translate-y-1/2 opacity-25 sm:h-56" />
         <div aria-hidden="true" class="k-glow pointer-events-none absolute bottom-10 left-1/2 h-40 w-[28rem] max-w-full -translate-x-1/2 bg-brass/25"></div>
         <div class="relative flex flex-col items-center px-6 py-14 text-center sm:py-20">
           <k-logo [size]="56" bars="#f7f4ec" />

@@ -72,6 +72,11 @@ body {
   overflow-x: clip;
 }
 
+/* The staff is drawn in from JavaScript (shared/staff.ts); hidden until its first frame so the still drawing never flashes. */
+.k-motion .k-staff-svg:not(.k-staff-ready) {
+  visibility: hidden;
+}
+
 ::selection {
   background: var(--color-primary-200);
   color: var(--color-ink);

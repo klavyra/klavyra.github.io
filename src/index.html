@@ -10,6 +10,11 @@
   <meta name="theme-color" content="#f7f4ec">
   <link rel="canonical" href="https://j-roque.github.io/klavyra-landing/">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- When motion is allowed (or forced with ?movimiento), the staff stays hidden until it is drawn in, so it never jumps. -->
+  <script>
+    if (/[?&]movimiento\b/.test(location.search) || !matchMedia('(prefers-reduced-motion: reduce)').matches)
+      document.documentElement.classList.add('k-motion');
+  </script>
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_ES">
