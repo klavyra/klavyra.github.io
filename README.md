@@ -4,7 +4,7 @@ La web oficial de [Klavyra](https://github.com/J-Roque/Klavyra): una sola págin
 
 - **Autor:** Johel Roque · © 2026 · Licencia GNU AGPL-3.0
 - **Idioma:** español
-- **Dónde se publica:** GitHub Pages, gratis. La URL será `https://j-roque.github.io/Klavyra/` o la de un repo propio de la landing. No hay presupuesto para hosting ni dominio.
+- **Dónde se publica:** GitHub Pages, gratis. Está en `https://klavyra.github.io/` (repo `klavyra/klavyra.github.io`, de la organización `klavyra`). No hay presupuesto para hosting ni dominio.
 - **Descarga:** el botón enlaza a `https://github.com/J-Roque/Klavyra/releases/latest`; la web no aloja el instalador. Enlace directo para más adelante, si se quiere: `https://github.com/J-Roque/Klavyra/releases/latest/download/Klavyra-Setup-0.1.0.exe`. Cambia con cada versión, así que es mejor la página `latest`.
 - **Ojo:** la Release v0.1.0 todavía no existe y el repo aún es privado. La landing se arma ahora y se publica el mismo día que la Release.
 
@@ -106,5 +106,5 @@ npm run og         # regenera public/og.png (1200×630) con Edge o Chrome sin in
 ```
 
 - Estructura: `src/app/sections/` (una sección por archivo) y `src/app/shared/` (logo, pentagrama animado, marco de ventana, iconos y enlaces). Los enlaces de descarga y del repo están en `src/app/shared/links.ts`.
-- Despliegue: `.github/workflows/deploy.yml` publica en GitHub Pages al hacer push a `main` (o a mano desde Actions). En el repo hay que elegir *Settings → Pages → Source: GitHub Actions*. El `base-href` se calcula solo, así que sirve igual en `https://j-roque.github.io/klavyra-landing/` que en otra ruta.
-- Si la URL final no es `https://j-roque.github.io/klavyra-landing/`, cambia `canonical`, `og:url`, `og:image` y `twitter:image` en `src/index.html`.
+- Despliegue: `.github/workflows/deploy.yml` publica en GitHub Pages al hacer push a `main` (o a mano desde Actions). En el repo hay que elegir *Settings → Pages → Source: GitHub Actions*. El `base-href` se calcula solo, así que sirve igual en `https://klavyra.github.io/` que en otra ruta.
+- Si la URL final no es `https://klavyra.github.io/`, cambia `canonical`, `og:url`, `og:image` y `twitter:image` en `src/index.html`.
